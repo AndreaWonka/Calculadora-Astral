@@ -1,12 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #3871da;
-    margin: 0;
-    padding: 20px;
+    background-image: url('images/img1.jpg'); /* Asegúrate de que la extensión de la imagen sea correcta (jpg, png, etc.) */
+    background-size: cover; /* Esto asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Esto centra la imagen */
+    background-repeat: no-repeat; /* Esto evita que la imagen se repita */
 }
 
-h1 {
-    color: hsl(33, 65%, 65%);
+
+h1 { 
+    color: hwb(33 75% 6%);
 }
 
 form {
@@ -28,14 +29,14 @@ input {
 button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #e2e8ee;
+    background-color: #f1d585;
     color: rgb(38, 119, 185);
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #bb0606;
 }
 
 #resultado {
