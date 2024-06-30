@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>🌓✨🌞Calculadora Astral🪐✨🌔</h1>
-    <!-- Formulario para obtener los datos de nacimiento -->
-    <form onsubmit="return false;"> <!-- Previniendo comportamiento por defecto del formulario -->
+    <form id="formulario-astral" onsubmit="return false;">
+        <!-- Formulario para ingresar datos de nacimiento -->
         <div>
             <label for="fechaNacimiento">Fecha de Nacimiento:</label>
             <input type="date" id="fechaNacimiento" name="fechaNacimiento" required aria-label="Fecha de nacimiento"><br>
@@ -22,9 +22,9 @@
             <label for="lugarNacimiento">Lugar de Nacimiento:</label>
             <input type="text" id="lugarNacimiento" name="lugarNacimiento" required aria-label="Lugar de nacimiento"><br>
         </div>
-        <button type="button" id="botonCalcular">Calcular</button> <!-- Botón para calcular el ascendente y descendente -->
+        <button type="button" id="calcularBtn">Calcular</button>
     </form>
-    <div id="resultado"></div> <!-- Div para mostrar el resultado -->
+    <div id="resultado"></div>
     <script src="calculadora.js"></script>
 </body>
 </html>
