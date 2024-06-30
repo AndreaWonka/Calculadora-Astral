@@ -1,29 +1,28 @@
 body {
-    background-image: url('images/img1.jpg'); /* Asegúrate de que la extensión de la imagen sea correcta (jpg, png, etc.) */
-    background-size: cover; /* Esto asegura que la imagen cubra toda la pantalla */
-    background-position: center; /* Esto centra la imagen */
-    background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+    background-image: url('images/img1.jpg'); /* Asegúrate de tener esta imagen en la carpeta 'images' */
+    background-size: cover; /* La imagen cubre todo el fondo de la pantalla */
+    background-position: center; /* La imagen se centra correctamente en la pantalla */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
 }
 
-
-h1 { 
-    color: hwb(33 75% 6%);
+h1 {
+    color: hwb(33 75% 6%); /* Asegura que el color sea el deseado, hwb es una alternativa a rgb y hex */
 }
 
 form {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espacio después del formulario */
 }
 
 label {
-    display: block;
-    margin-top: 10px;
+    display: block; /* Hace que la etiqueta ocupe toda la línea, facilitando la organización */
+    margin-top: 10px; /* Espacio antes de cada etiqueta */
 }
 
 input {
-    margin-top: 5px;
-    padding: 5px;
-    width: 100%;
-    max-width: 300px;
+    margin-top: 5px; /* Espacio superior para separar de otros elementos */
+    padding: 5px; /* Relleno interno para hacer el texto más legible */
+    width: 100%; /* Aprovecha todo el ancho disponible */
+    max-width: 300px; /* Limita el ancho máximo a 300px para evitar un input demasiado largo */
 }
 
 button {
@@ -33,15 +32,17 @@ button {
     color: rgb(38, 119, 185);
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s; /* Agrega esta línea para suavizar las transiciones de color */
 }
 
-button:hover {
-    background-color: #bb0606;
+button:hover, button:focus, button:active {
+    background-color: #bb0606; /* Asegura que el color cambie en hover, focus y active */
+    outline: none; /* Remueve el contorno que algunos navegadores añaden en focus */
 }
 
 #resultado {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    margin-top: 20px; /* Espacio después del contenido del formulario */
+    padding: 10px; /* Relleno interno para el contenido */
+    background-color: #fff; /* Fondo blanco para el contenido */
+    border: 1px solid #ddd; /* Borde sutil para delinear el área de resultado */
 }
