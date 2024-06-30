@@ -1,10 +1,10 @@
 // Función para determinar el signo zodiacal basado en la fecha de nacimiento
 function obtenerSignoZodiacal(fechaNacimiento) {
-    const fecha = new Date(fechaNacimiento); // Convertir la fecha de nacimiento a un objeto Date
-    const dia = fecha.getDate(); // Obtener el día de la fecha
-    const mes = fecha.getMonth() + 1; // Obtener el mes de la fecha (los meses en JavaScript van de 0 a 11, por eso se suma 1)
+    const fecha = new Date(fechaNacimiento);
+    const dia = fecha.getDate();
+    const mes = fecha.getMonth() + 1; // Los meses en JavaScript van de 0 a 11
 
-    // Array de objetos que representan los signos zodiacales y sus rangos de fechas
+    // Lista de signos zodiacales con sus fechas
     const signos = [
         { signo: "Capricornio", desde: { mes: 12, dia: 22 }, hasta: { mes: 1, dia: 19 } },
         { signo: "Acuario", desde: { mes: 1, dia: 20 }, hasta: { mes: 2, dia: 18 } },
@@ -20,16 +20,16 @@ function obtenerSignoZodiacal(fechaNacimiento) {
         { signo: "Sagitario", desde: { mes: 11, dia: 22 }, hasta: { mes: 12, dia: 21 } }
     ];
 
-    // Encontrar y devolver el signo zodiacal correspondiente
+    // Determina el signo basándose en la fecha
     return signos.find(s =>
         (mes === s.desde.mes && dia >= s.desde.dia) || 
         (mes === s.hasta.mes && dia <= s.hasta.dia)
-    )?.signo || null; // Si no se encuentra el signo, devolver null
+    )?.signo || null;
 }
 
 // Función para determinar el ascendente y descendente basado en el signo zodiacal
 function obtenerAscendenteDescendente(signo) {
-    // Objeto que contiene los ascendentes y descendentes para cada signo zodiacal
+    // Objeto que almacena los ascendentes y descendentes para cada signo
     const ascendentesDescendentes = {
         "Aries": {
             ascendente: "Libra",
@@ -49,32 +49,30 @@ function obtenerAscendenteDescendente(signo) {
         }
     };
 
-    // Devolver el ascendente y descendente correspondiente al signo
+    // Retorna los valores de ascendente, descendente y la descripción del signo
     return ascendentesDescendentes[signo];
 }
 
 // Función principal que se ejecuta cuando se hace clic en el botón de "Calcular"
 function calcularAscendenteDescendente() {
-    const fechaNacimiento = document.getElementById("fechaNacimiento").value; // Obtener la fecha de nacimiento del input
-    if (!fechaNacimiento) { // Verificar si la fecha de nacimiento no está vacía
-        alert("Por favor, introduce tu fecha de nacimiento."); // Mostrar un mensaje de alerta si está vacía
-        return; // Salir de la función
+    const fechaNacimiento = document.getElementById("fechaNacimiento").value;
+    if (!fechaNacimiento) {
+        alert("Por favor, introduce tu fecha de nacimiento.");
+        return;
     }
 
-    const signo = obtenerSignoZodiacal(fechaNacimiento); // Obtener el signo zodiacal basado en la fecha de nacimiento
-    if (!signo) { // Verificar si el signo zodiacal es válido
-        alert("Fecha de nacimiento inválida. Por favor, intenta de nuevo."); // Mostrar un mensaje de alerta si es inválida
-        return; // Salir de la función
+    const signo = obtenerSignoZodiacal(fechaNacimiento);
+    if (!signo) {
+        alert("Fecha de nacimiento inválida. Por favor, intenta de nuevo.");
+        return;
     }
 
-    // Obtener el ascendente y descendente basado en el signo zodiacal
     const { ascendente, descendente, descripcion } = obtenerAscendenteDescendente(signo);
 
     console.log("Fecha Nacimiento:", fechaNacimiento);
     console.log("Signo Zodiacal:", signo);
     console.log("Ascendente:", ascendente, "Descendente:", descendente);
 
-    // Mostrar los resultados en el div de resultados
     const resultadoDiv = document.getElementById("resultado");
     resultadoDiv.innerHTML = `
         <p>Signo Zodiacal: ${signo}</p>
@@ -84,5 +82,5 @@ function calcularAscendenteDescendente() {
     `;
 }
 
-// Añadir el evento de clic al botón para calcular el ascendente y descendente
-document.getElementById("botonCalcular").addEventListener("click", calcularAscendenteDescendente);
+// Añadir el evento al botón
+document.getElementById('calcularBtn').addEventListener('click', calcularAscendenteDescendente);
