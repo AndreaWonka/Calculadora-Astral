@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/img1.jpg'); /* Asegúrate de tener esta imagen en la carpeta 'images' */
+    background-image: url('images/constelacion.jpg'); /* Asegúrate de tener esta imagen en la carpeta 'images' */
     background-size: cover; /* La imagen cubre todo el fondo de la pantalla */
     background-position: center; /* La imagen se centra correctamente en la pantalla */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
@@ -26,17 +26,17 @@ input {
 }
 
 button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #f1d585;
-    color: rgb(38, 119, 185);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Agrega esta línea para suavizar las transiciones de color */
+    margin-top: 10px; /* Espacio superior para separar del formulario */
+    padding: 10px 20px; /* Relleno interno para hacer el botón más fácil de hacer clic */
+    background-color: #f1d585; /* Color de fondo del botón */
+    color: rgb(38, 119, 185); /* Color del texto del botón */
+    border: none; /* Sin borde para el botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color */
 }
 
 button:hover, button:focus, button:active {
-    background-color: #bb0606; /* Asegura que el color cambie en hover, focus y active */
+    background-color: #bb0606; /* Cambia el color de fondo al pasar el ratón, enfocar o hacer clic en el botón */
     outline: none; /* Remueve el contorno que algunos navegadores añaden en focus */
 }
 
