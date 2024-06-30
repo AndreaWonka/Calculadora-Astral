@@ -8,17 +8,20 @@
 </head>
 <body>
     <h1>🌓✨🌞Calculadora Astral🪐✨🌔</h1>
-    <form>
-        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br>
-
-        <label for="horaNacimiento">Hora de Nacimiento:</label>
-        <input type="time" id="horaNacimiento" name="horaNacimiento"><br>
-
-        <label for="lugarNacimiento">Lugar de Nacimiento:</label>
-        <input type="text" id="lugarNacimiento" name="lugarNacimiento"><br>
-
-        <button type="button" onclick="calcularAscendenteDescendente()">Calcular</button>
+    <form onsubmit="return false;"> <!-- Previniendo comportamiento por defecto del formulario -->
+        <div>
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required aria-label="Fecha de nacimiento"><br>
+        </div>
+        <div>
+            <label for="horaNacimiento">Hora de Nacimiento:</label>
+            <input type="time" id="horaNacimiento" name="horaNacimiento" required aria-label="Hora de nacimiento"><br>
+        </div>
+        <div>
+            <label for="lugarNacimiento">Lugar de Nacimiento:</label>
+            <input type="text" id="lugarNacimiento" name="lugarNacimiento" required aria-label="Lugar de nacimiento"><br>
+        </div>
+        <button type="button" id="myButton">Calcular</button>
     </form>
     <div id="resultado"></div>
     <script src="calculadora.js"></script>
